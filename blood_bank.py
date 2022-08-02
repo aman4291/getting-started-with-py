@@ -31,3 +31,17 @@ def show_all_data():
         print("blood_group: ", data_inventory[index+3])
         print("last_donated_date: ", data_inventory[index+4])
         print("\n")
+
+# -------to search user data-----------
+
+def search_data():
+    name=input("\nEnter the name of user : \n")
+    for index in range(0, len(data_inventory), 5):
+        if (name == data_inventory[index]):
+           print("\nThis user data is present in this list :\n",
+           data_inventory[index], data_inventory[index+1], data_inventory[index+2], data_inventory[index+3], data_inventory[index+4]) 
+           return index
+
+        elif len(data_inventory)-5 == index:
+            print("Error: Data not found")
+            return None
