@@ -81,3 +81,26 @@ def delete_user():
 
     print(f'\nThe user {name} has been removed from the inventory')
     return True
+
+# Below code will take action input from the users
+
+def main():
+    choice = 1
+    while(choice):
+        print("A: Add User  \t B: Showall Users  \t C: Search User  \t D: Delete User  \t E: Update User  \t X: exit")
+        choice = (input("\nEnter your choice : "))
+        if(choice == 'X'):
+            print("Thanks for visiting our Application")
+        elif(choice == 'A'):
+            print("\nAdd new User")
+            data_input()   
+        elif(choice == 'B'):
+            print("\nDisplaying all users data\n")
+            show_all_data()    
+        elif(choice == 'C'):
+            search_data()   
+        elif(choice == 'D'):
+            delete_user()        
+        elif(choice == 'E'):
+            update_user_data()
+main()
