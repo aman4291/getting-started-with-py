@@ -64,3 +64,20 @@ def update_user_data():
     data_inventory[index+3]= blood_group
     last_date=input("Enter the last date when user has donated blood: \n")
     data_inventory[index+3]= last_date
+
+# ------------To delete user data---------
+           
+def delete_user():
+    print("\nSearch the user's name, whom data you want to delete")
+    index= search_data() 
+    if index is None:
+        return False
+    print("\n",data_inventory)
+    last_donation_date = data_inventory.pop(index+4)
+    blood_goup = data_inventory.pop(index+3)
+    place = data_inventory.pop(index+2)
+    dob =data_inventory.pop(index+1)
+    name = data_inventory.pop(index)
+
+    print(f'\nThe user {name} has been removed from the inventory')
+    return True
