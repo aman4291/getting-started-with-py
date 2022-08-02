@@ -20,3 +20,14 @@ def data_input():
     data_inventory.append(place)
     data_inventory.append(blood_group)
     data_inventory.append(last_donated_date)
+
+# --------To show-all user data---------
+
+def show_all_data():
+    for index in range(0, len(data_inventory), 5):
+        print("Name: ", data_inventory[index])
+        print("dob: ", data_inventory[index+1])
+        print("place: ", data_inventory[index+2])
+        print("blood_group: ", data_inventory[index+3])
+        print("last_donated_date: ", data_inventory[index+4])
+        print("\n")
