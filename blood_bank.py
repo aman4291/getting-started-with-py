@@ -12,3 +12,11 @@ def data_input():
     place= input("Where do you live?\n")
     blood_group= input("What is your Blood Group:\n")
     last_donated_date= input("Last time you donated blood(specify date):\n")
+
+# To store inputs in list
+
+    data_inventory.append(name)
+    data_inventory.append(dob)
+    data_inventory.append(place)
+    data_inventory.append(blood_group)
+    data_inventory.append(last_donated_date)
