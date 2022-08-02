@@ -45,3 +45,22 @@ def search_data():
         elif len(data_inventory)-5 == index:
             print("Error: Data not found")
             return None
+
+# ------------To update user data---------
+
+def update_user_data():
+    index= search_data()
+    if index == None:
+        return 
+
+    print("Enter the values to update User: \n")
+
+    data_inventory[index]= input("Enter name: \n")
+    dob=input("Enter Date of Birth: \n")
+    data_inventory[index+1]= dob
+    place=input("Enter the name of city: \n")
+    data_inventory[index+2]= place
+    blood_group=input("Enter Blood Group: \n")
+    data_inventory[index+3]= blood_group
+    last_date=input("Enter the last date when user has donated blood: \n")
+    data_inventory[index+3]= last_date
